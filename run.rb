@@ -4,7 +4,7 @@ require 'sinatra/base'
 # The project root directory
 $root = ::File.dirname(__FILE__)
 
-class SinatraStaticServer < Sinatra::Base
+class Blog < Sinatra::Base
 
   get(/.+/) do
     send_sinatra_file(request.path) {404}
@@ -21,5 +21,3 @@ class SinatraStaticServer < Sinatra::Base
   end
 
 end
-
-run SinatraStaticServer
